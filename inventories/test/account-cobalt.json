@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "sap-ariba-cobalt",
+  "private_key_id": "3bcdd472532856e894c60ef82bbd56db013641a3",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDReXifxcwUu35J\nyPgDGS2Vu+S2OMOp5fTI6/CUSEqOcc4zyAnHCUM6UTzNSNsfHdKynxZTFFX/Gxqt\nomHW6r85jjThZ2zywYVoN6t2ChDxAQnIAspbpqOYDorWYbbpPxdZHlVBG04BataJ\nGHRBx0j7BjgKTwArt6ya0Gv4BJcUfMphboWURREFjHZhEdvfrUM7pK+/7Mb2yCNT\nFiP8ioTraUcne2ac/xUWHnFUUQI27xoONYTfBs2lm0XhS82zepemWnf1R1s5jPzR\nmtIB9RUXsPI6dQPlfmvHOqOln0sNkVAixlm7GP7LjYbjfoDXISNwkLA2R+yd1p3t\nxDkOat+LAgMBAAECggEACvFE/1emTwjyUmlop0TH8FP14Rz6/6OPE3Xbxes21dUV\nF/hhpl+R/vhibDjblXcJ3CHaWTGtQlvIm3xpjwAJSDjpA0NTWiUI0oZh8xMYinZq\n6+NVbc85KYbM8uD83JdaoWGnw3RpMULC/TtlS1BdPBu5jrRMxnvcTOQJV9XpjHzW\nIcLyilBOPvrq7CgqD97H9gXNnOH7f5XYQlgCDHrZEr2MZAqwf3RAQ4934BKzS580\nJL+rjthFBwHCm7CiZyBaIJFuqwZJfbcmIyX8rPxfqoksM83ERGIB9dNjg5kLy7Rx\nxC589VuCfrhO0dqz3bT3iNpaepnEiqTOUxq+1YNNxQKBgQDwRDPyQuhzjj8nLAvy\nAKWx9Yzt6nPeLNmSOdg7SL3WHYcAGyIJ0uW9jyEQeKSta3J7LRn5NdxB+9A8Ebhg\nuY+rJHcMdb1l+GcynL4KUN2qKTpsmvAJKyR+2DM03dDBtNEbXeu5EDwvR0JfvMZB\n2eATgCxUNEZOkNlV/L+3EgEkpQKBgQDfMROE51bQveq5DHzBc5YbBzkF3gb1KMxx\nTd10T/rHb84T7mUP6F18LqkSYFKIl2eNDGrmEL7gNzZ8EwHAq36gnUovAbEtcw0M\nstpTVyF2wMk+xf6jAMVa1NS1VXfD9AuVclF5weV1Wwf//kN3ARSNPeg0TfYqc6Hx\nZLrud+9MbwKBgBI8Ou0SIu5SR3zDnQx6/BhrmIyeFLkyEjlE5qJpPO85QnvBk23H\nceRXLp0/atA2rXOn0qbVbagcYouMlL/SlZLZq6docD2DAuIWf13tEUXO5z5C7CDm\nA1kVM525kBSDkrNPB4r+LnMwJ1t4yltJG/ae7b5eUU+5MqWSD0LnvOp5AoGABiri\nAjMuV/hXiyOIMwRRqo+JiNr40D9/XsYrD3LCWE6DoFNfIZBnPO5BJ8vXnASrDN/B\n+HeP/rwn2kfgLYXPqvqNuTzPu5TJUIeEtvbaauCq7vwjrDdyPK9S7WveMmEFDO0q\nyTWNdK++Sdmp3Zj/C2QhjYh1+/hUCkqhS8OurisCgYB9Q2Fm9IS+Q9vvO/6rnRo9\nu3YpoCZ/o3R83qIo5wvIg5N7ln/zePnb/fT9ZavIa6vEvqTH1iBH5qAGQxZc2yF3\nKINkbii3+eN5Z8m9C2UwGeWjZZZjfaW+NtQZCtZJt92sdFjOjQ2o5CXQTG7q6Rru\nx8lv9aSX/zv7Mb+x9PBa4A==\n-----END PRIVATE KEY-----\n",
+  "client_email": "frank-han-01@sap-ariba-cobalt.iam.gserviceaccount.com",
+  "client_id": "115697142220530392574",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/frank-han-01%40sap-ariba-cobalt.iam.gserviceaccount.com"
+}

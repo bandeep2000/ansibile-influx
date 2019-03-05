@@ -1,0 +1,77 @@
+# Add condition for RH6, what is sdb is sdc, how do we check
+- name:  Copy influxdb
+  copy:
+    src: files/influxdb.repo
+    dest: /etc/yum.repos.d/influxdb.repo
+    owner: root
+    mode: 0755
+
+- debug:
+    msg: "hello"
+
+- name: Create a ext4 filesystem on /dev/sdb
+  filesystem:
+     fstype: ext4
+     dev: /dev/sdb
+
+- name: Create a ext4 filesystem on /dev/sdc
+  filesystem:
+     fstype: ext4
+     dev: /dev/sdc
+# - name: Mount data
+#   mount:
+#     path: /mnt/data
+#     src: /dev/sdc
+#     fstype: ext4
+#     state: mounted
+
+- name: Mount wal
+  mount:
+    path: "{{ item.path }}"
+    src: "{{ item.src }}"
+    fstype: ext4
+    state: mounted
+  
+  with_items:
+          - { src: '/dev/sdb', path: '/mnt/influx' }
+          - { src: '/dev/sdc', path: '/mnt/db' }
+
+- debug:
+    msg:  "hello!!!!"
+
+
+- name: install dependencies
+  #yum: pkg={{item}} state=present
+  yum: 
+    pkg: ['influxdb']
+    state: present
+
+  #with_items:
+  #  - influxdb
+
+- name:  Copy influxdb conf
+  #when:  "{{envirnoment}}" == "dev"
+  copy:
+    src: files/influxdb.conf
+    dest: /etc/influxdb/influxdb.conf
+    owner: root
+    mode: 0755
+
+- name: Changing ownership
+  file:
+    path: /mnt/influx
+    owner: influxdb
+    group: influxdb
+    #mode: 0644
+
+- file:
+    path: /mnt/db
+    owner: influxdb
+    group: influxdb
+    #mode: 0644
+
+- name: restart service influxdb
+  when:    ansible_distribution == "RedHat" and ansible_distribution_major_version == "7"
+  service:
+     name: influxdb
+     state: restarted
