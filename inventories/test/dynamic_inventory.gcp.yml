@@ -5,7 +5,7 @@ projects:
 filters:
 scopes:
   - https://www.googleapis.com/auth/compute
-service_account_file: /Users/c5278791/ansible/inventories/test/account-cobalt.json
+service_account_file: /var/accounts/account-cobalt.json
 auth_kind: serviceaccount
 keyed_groups:
   # Create groups from GCE labels

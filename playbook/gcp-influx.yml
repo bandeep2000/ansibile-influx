@@ -1,6 +1,6 @@
 ---
 # create influxdb
-- hosts: gcp
+- hosts: gcp_server_influx
   gather_facts: yes
   become: yes
   become_method: sudo
