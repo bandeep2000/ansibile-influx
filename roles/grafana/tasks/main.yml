@@ -1,5 +1,10 @@
+- name:  grafana server started
+  when:    ansible_distribution == "RedHat" and ansible_distribution_major_version == "7"
+  service:
+     name: grafana-server
+     state: started
 - name: Create influxdb datasource
-    grafana_datasource:
+  grafana_datasource:
       name: "datasource-influxdb"
       grafana_url: "{{grafana_url}}"
       grafana_user: "{{grafana_user}}"
@@ -9,4 +14,3 @@
       url: "{{influx_url}}"
       database: "{{database}}"
       time_interval: ">10s"
-
