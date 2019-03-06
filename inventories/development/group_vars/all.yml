@@ -1,1 +1,6 @@
 envirnoment: dev
+grafana_url: http://35.197.14.99:3000
+influx_url: http://35.197.90.43:8086"
+database: telegraf
+grafana_user: admin
+grafana_password: admin
