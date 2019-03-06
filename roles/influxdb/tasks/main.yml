@@ -31,7 +31,7 @@
     src: "{{ item.src }}"
     fstype: ext4
     state: mounted
-  
+
   with_items:
           - { src: '/dev/sdb', path: '/mnt/influx' }
           - { src: '/dev/sdc', path: '/mnt/db' }
@@ -42,7 +42,7 @@
 
 - name: install dependencies
   #yum: pkg={{item}} state=present
-  yum: 
+  yum:
     pkg: ['influxdb']
     state: present
 
@@ -75,3 +75,13 @@
   service:
      name: influxdb
      state: restarted
+
+- name:  influxdb  started
+  when:    ansible_distribution == "RedHat" and ansible_distribution_major_version == "7"
+  service:
+     name: influxdb
+     state: started
+
+- name: Test using curl influx up
+  when:    ansible_distribution == "RedHat" and ansible_distribution_major_version == "7"
+  command: curl -I http://localhost:8086/ping
