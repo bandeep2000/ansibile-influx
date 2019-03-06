@@ -71,17 +71,17 @@
     #mode: 0644
 
 - name: restart service influxdb
-  when:    ansible_distribution == "RedHat" and ansible_distribution_major_version == "7"
+  when:    ansible_distribution == "RedHat" and ansible_distribution_major_version == "6"
   service:
      name: influxdb
      state: restarted
 
 - name:  influxdb  started
-  when:    ansible_distribution == "RedHat" and ansible_distribution_major_version == "7"
+  when:    ansible_distribution == "RedHat" and ansible_distribution_major_version == "6"
   service:
      name: influxdb
      state: started
 
 - name: Test using curl influx up
-  when:    ansible_distribution == "RedHat" and ansible_distribution_major_version == "7"
+  when:    ansible_distribution == "RedHat" and ansible_distribution_major_version == "6"
   command: curl -I http://localhost:8086/ping
