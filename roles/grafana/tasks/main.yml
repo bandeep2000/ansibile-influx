@@ -3,14 +3,3 @@
   service:
      name: grafana-server
      state: started
-- name: Create influxdb datasource
-  grafana_datasource:
-      name: "datasource-influxdb"
-      grafana_url: "{{grafana_url}}"
-      grafana_user: "{{grafana_user}}"
-      grafana_password: "{{grafana_password}}"
-      org_id: "1"
-      ds_type: "influxdb"
-      url: "{{influx_url}}"
-      database: "{{database}}"
-      time_interval: ">10s"

@@ -11,4 +11,15 @@
   roles:
   - ../roles/influxdb
   #debug: var=ansible_facts
+- hosts: gcp_influx_grafana
+  gather_facts: yes
+  become: yes
+  become_method: sudo
+
+  vars_files:
+      - ../inventories/development/group_vars/all.yml
+  roles:
+  - ../roles/grafana
+  #debug: var=ansible_facts
+
 
