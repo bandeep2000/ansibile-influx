@@ -1,5 +1,10 @@
-  - name: Configure telegraf conf file
-    template:
+- name: Configure telegraf conf file
+  template:
         src: ../files/telegraf.j2
-        dest: /home/c5278791/test1/telegraf.conf
+        dest: /etc/telegraf/telegraf.conf
         mode: 0777
+- name: restart service telegraf
+  when:    ansible_distribution == "RedHat" and ansible_distribution_major_version == "6"
+  service:
+     name: telegraf
+     state: restarted
