@@ -5,6 +5,8 @@
 
   vars:
     influx_url_set: 'http://35.203.163.82:8086'
+    datacenter: "prodau"
   #when:    ansible_distribution == "RedHat" and ansible_distribution_major_version == "7"
   roles:
+  - ../roles/common
   - ../roles/telegraf
