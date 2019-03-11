@@ -1,0 +1,10 @@
+- hosts: gcp
+  gather_facts: yes
+  become: yes
+  become_method: sudo
+
+  vars:
+    influx_url_set: 'http://35.203.163.83:8086'
+  #when:    ansible_distribution == "RedHat" and ansible_distribution_major_version == "7"
+  roles:
+  - ../roles/telegraf

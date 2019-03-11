@@ -1,0 +1,5 @@
+  - name: Configure telegraf conf file
+    template:
+        src: ../files/telegraf.j2
+        dest: /home/c5278791/test1/telegraf.conf
+        mode: 0777
