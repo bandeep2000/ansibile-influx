@@ -8,3 +8,12 @@
   service:
      name: telegraf
      state: restarted
+
+# Had to add this, since restarting telegraf doesnt catch failing errors
+# restart is sending 0 ok status even when it fails , so adding this
+- name: Check Telegraf status
+  command: service telegraf status
+  register: command_result
+  failed_when: "'FAILED' in command_result.stdout"
+  args:
+    warn: false
