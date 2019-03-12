@@ -120,7 +120,7 @@
   urls = [ "{{ influx_url_set }}" ]
   database = "mars"
   username = ""
-  password = "b6R4teTtVvY9BaYZ"
+  password = ""
   insecure_skip_verify = true
   write_consistency = "any"
   timeout = "5s"
@@ -4904,9 +4904,9 @@
 
 
 # # Statsd UDP/TCP Server
-# [[inputs.statsd]]
+[[inputs.statsd]]
 #   ## Protocol, must be "tcp", "udp", "udp4" or "udp6" (default=udp)
-#   protocol = "udp"
+   protocol = "udp"
 #
 #   ## MaxTCPConnection - applicable when protocol is set to tcp (default=250)
 #   max_tcp_connections = 250
@@ -4920,7 +4920,7 @@
 #   # tcp_keep_alive_period = "2h"
 #
 #   ## Address and port to host UDP listener on
-#   service_address = ":8125"
+    service_address = ":8125"
 #
 #   ## The following configuration options control when telegraf clears it's cache
 #   ## of previous values. If set to false, then telegraf will only clear it's
