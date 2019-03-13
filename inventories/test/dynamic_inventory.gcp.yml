@@ -5,7 +5,7 @@ projects:
 filters:
 scopes:
   - https://www.googleapis.com/auth/compute
-service_account_file: /var/accounts/account-cobalt.json
+service_account_file: 
 auth_kind: serviceaccount
 keyed_groups:
   # Create groups from GCE labels
